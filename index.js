@@ -21,9 +21,8 @@ app.use(express.static('public'));
 app.use(express.json());
 
 // Routes
-// TODO : auth // crear, login, renew
 app.use('/api/auth', require('./routes/auth'));
-// TODO: CRUD: Eventos
+app.use('/api/events', require('./routes/events'));
 
 // List to uests
 app.listen(process.env.PORT, () => {
