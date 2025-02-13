@@ -36,13 +36,6 @@ const createEvent = async (req, res = response) => {
             msg: "Talk to the admin"
         })
     }
-
-    res.json({
-        ok: true,
-        msg: 'Create event'
-    })
-
-
 }
 
 const updateEvent = async (req, res = response) => {
@@ -122,7 +115,7 @@ const deleteEvent = async (req, res = response) => {
         // Delete event and show 
         await Event.findByIdAndDelete(idEvent);
 
-        res.json({ok: true, msg: 'Event has been deleted' })
+        res.json({ ok: true, msg: 'Event has been deleted' })
 
     } catch (error) {
         console.log(error);
